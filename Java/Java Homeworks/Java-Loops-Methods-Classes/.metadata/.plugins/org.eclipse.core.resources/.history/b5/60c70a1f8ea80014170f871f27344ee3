@@ -1,0 +1,33 @@
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+import java.util.Scanner;
+
+import javax.print.attribute.standard.DateTimeAtCompleted;
+
+
+public class DaysBetween2Days {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		Date date1 = getDate(input.nextLine());
+		Date date2 = getDate(input.nextLine());
+		long days = -1;
+		
+		days = Math.round((date2.getTime() - date1.getTime()) / (double) 86400000);
+		System.out.println(days);
+
+	}
+	public static Date getDate(String input) {
+		String[] values = input.split("-");
+		Date date = new Date();
+		date.setYear(Integer.parseInt(values[2]));
+		date.setMonth(Integer.parseInt(values[1]));
+		date.setDate(Integer.parseInt(values[0]));
+		return date;
+		
+		
+		
+	}
+
+}

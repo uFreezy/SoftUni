@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+
+public class ex03 {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		String[] comb = input.nextLine().split(" ");
+		double sum = 0;
+		
+		for(int i = 0; i < comb.length; i++){
+			comb[i] = comb[i].trim();
+		}
+		for(int i = 0; i < comb.length; i++) {
+			if(comb[i] != null) {
+				if(Character.isUpperCase(comb[i].charAt(0))) {
+					//str.replaceAll("[^0-9]+", " ");
+					double currentSum = 0;
+					//int number =
+					currentSum += Integer.parseInt(comb[i].replaceAll("[\\D]", "")) / 
+							1 + (comb[i].charAt(0) - 'A');
+					if(Character.isUpperCase(comb[i].charAt(comb[i].length()-1))) {
+						currentSum = currentSum - (1 + (comb[i].charAt(comb[i].length()-1) - 'A'));
+						sum += currentSum;
+					}
+					else {
+						currentSum = currentSum + (1 + (comb[i].charAt(comb[i].length()-1) - 'a'));
+						sum += currentSum;
+					}
+				}
+				else {
+					double currentSum = 0;
+					currentSum += Integer.parseInt(comb[i].replaceAll("[\\D]", "")) * 
+							(1 + (comb[i].charAt(0) - 'a'));
+					if(Character.isUpperCase(comb[i].charAt(comb[i].length()-1))) {
+						currentSum = currentSum - (1 + (comb[i].charAt(comb[i].length()-1) - 'A'));
+						sum += currentSum;
+					}
+					else {
+						currentSum = currentSum + (1 + (comb[i].charAt(comb[i].length()-1) - 'a'));
+						sum += currentSum;
+					}
+				}
+			}
+		}
+		System.out.printf("%.2f",sum);
+
+	}
+
+}

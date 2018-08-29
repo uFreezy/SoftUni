@@ -1,0 +1,38 @@
+﻿@model Twitter.MVC.Models.ProfileViewModel
+@{
+    ViewBag.Title = "Profile";
+}
+
+<div class="row">
+    <h1>@Model.Username</h1>
+    <nav>
+        @{
+            if (Model.IsFollowed != null)
+            {
+                @Html.ActionLink(Model.IsFollowed, Model.IsFollowed, new {userName = Model.Username})
+            }
+        }
+        @Html.ActionLink("Tweets", "Profile", new {})
+        @Html.ActionLink("Following", "Profile", new {})
+        @Html.ActionLink("Followers", "Profile", new {})
+        @Html.ActionLink("Favourites", "Profile", new {})
+    </nav>
+    <div class="row">
+        @{
+            foreach (var tweet in Model.Tweets)
+            {
+                <div class="row">
+                    <h3>@tweet.Author.UserName</h3>
+                    <h4>@tweet.PostedOn</h4>
+                    <p>
+                        @tweet.Text
+                    </p>
+                    <a href='@Url.Action("Retweet", "Tweet", new {})'>Retweet</a>
+                    <a href='@Url.Action("Favourite", "Tweet")'>Favourite</a>
+                    <a href='@Url.Action("Reply", "Tweet")'>Reply</a>
+                    <a href='@Url.Action("Report", "Tweet")'>Report</a>
+                </div>
+            }
+        }
+    </div>
+</div>

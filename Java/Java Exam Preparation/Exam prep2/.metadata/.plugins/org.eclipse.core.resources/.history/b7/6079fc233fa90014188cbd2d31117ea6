@@ -1,0 +1,48 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class LongestOddEvenSeq {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		String getInp = input.nextLine();
+		int valNumb =  getInp.length() - getInp.replaceAll("\\)", "").length();
+		int[] values = new int[valNumb];
+		String[] strBuff = getInp.split("\\)");
+		int bCount = 0;
+		int cCount = 0;
+		Boolean begin = true;
+		List<Integer> checked = new ArrayList();
+		
+		for(int i = 0; i < valNumb; i++) {
+			values[i] = Integer.parseInt(strBuff[i].replaceAll("\\W", ""));
+			//System.out.println(values[i]);
+		}
+		for(int i = 0; i < valNumb-1; i++) {
+			if(values[i] % 2 == 0 && values[i+1] % 2 != 0 || 
+					values[i] % 2 != 0 && values[i+1] % 2 == 0 || values[i+1] == 0) {
+				if(begin) {
+					cCount += 2;
+					begin = false;
+				}
+				else {
+					//begin = false;
+					cCount++;
+				}
+				if(cCount > bCount) {
+					bCount = cCount;
+				}
+			}
+			else {
+				cCount = 0;
+				begin = true;
+			}
+			//System.out.println(cCount);
+		}
+		System.out.println(bCount);
+	}
+
+}

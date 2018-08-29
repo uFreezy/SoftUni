@@ -1,0 +1,9 @@
+﻿<Window x:Class="ConcurrentUpdatesGUI.Success"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Success" Height="300" Width="300">
+    <Grid>
+        <Label Content="News saved in DB!" HorizontalAlignment="Center" Height="47" VerticalAlignment="Center" Width="209" FontSize="24" RenderTransformOrigin="0.497,0.545"/>
+        <Button Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="208" Margin="42,184,0,0" Height="47" Click="Button_Click"/>
+    </Grid>
+</Window>

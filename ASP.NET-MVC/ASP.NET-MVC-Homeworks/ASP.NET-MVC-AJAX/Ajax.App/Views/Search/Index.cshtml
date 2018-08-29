@@ -1,0 +1,42 @@
+﻿@model System.Data.Entity.IDbSet<Ajax.Models.City>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <input type="text" name="search" class="input-lg" id="search"/>
+    <ul id="suggestions">
+    </ul>
+</div>
+
+@section Scripts{
+    <script>
+        $("#search").focus(function() {
+            getCities();
+        });
+
+        $("#search").keyup(function() {
+            getCities();
+        });
+
+        function getCities() {
+            $("#suggestions").html("");
+
+            if ($("#search").val().trim() !== "") {
+                $.get("/Search/GetCities",
+                    { letters: $("#search").val() },
+                    function(data) {
+                        $.each(data, function(i) {
+                            $("#suggestions").append(
+                                "<li>" +
+                                data[i].CityName +
+                                "</li");
+                        });
+                    }
+                );
+            }
+        }
+    </script>
+}

@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lobster'), local('Lobster-Regular'), url(http://fonts.gstatic.com/s/lobster/v12/cycBf3mfbGkh66G5NhszPQ.woff2) format('woff2'), url(http://fonts.gstatic.com/s/lobster/v12/MWVf-Rwh4GLQVBEwbyI61Q.woff) format('woff');
+}
+@font-face {
+    font-family: Gylphs;
+    src: url(login-form-content/glyphicons-halflings-regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("login-form-content/background.png");
+}
+#wrapper {
+    width: 730px;
+    height: 320px;
+}
+#form {
+    width: 740px;
+    height: 300px;
+    display: inline-block;
+    background-color: #333333;
+    margin: 0 auto;
+}
+#wrapper > #form > header {
+    font-family: Lobster;
+    font-size: 150%;
+    background-color: #679966;
+    color: #C7CFAC;
+    width: 96%;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px 0;
+}
+#left, #right {
+    display: inline-block;
+    margin-left: 15px;
+    width: 350px;
+    height: 215px;
+}
+#left {
+    background-color: #232323;
+}
+#left > div {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+#left > div > span:before {
+    font-family: Gylphs;
+    content: "\e104";
+    color: #C7CFAC;
+    font-size: 55px;
+}
+#left > div > span {
+    display: block;
+    width: 75px;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+article > ul {
+    list-style-type: none;
+    margin-top: 15px;
+    text-align: center;
+    padding: 0;
+}
+article > ul > li:before {
+    font-family: Gylphs;
+    content: "\e089";
+    margin-right: 5px;
+    color: #C7CFAC;
+    font-size: 80%;
+}
+article > ul > li {
+    color: #C7CFAC;
+    margin-bottom: 15px;
+}
+#right {
+    position: absolute;
+}
+
+#right > header {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #C7CFAC;
+}
+#right > div {
+    width: 88%;
+    display: block;
+    margin: 0 auto;
+}
+#right > div > label > span:before {
+    font-family: Gylphs;
+    content: "\e008";
+    display: inline-block;
+    background-color: #679966;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: 12px;
+    line-height: 32px;
+    margin-top: 1px;
+    top: 2px;
+    position: relative;
+    padding-right: 9px;
+    padding-left: 9px;
+    height: 32px;
+}
+@-moz-document url-prefix() {
+    #right > div > label > span:before {
+        top: 1px;
+    }
+}
+#right > div > #country > span:before {
+    content: "\e135";
+}
+#right > div > label > input {
+    width: 85%;
+    height: 32px;
+    border: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 22px;
+    padding-left: 11px;
+}
+#right > button {
+    display: block;
+    background-color: #232323;
+    border: 0;
+    color: #fff;
+    width: 87.5%;
+    height: 32px;
+    margin: 0 auto;
+    border-radius: 3px;
+    margin-top: 22px;
+}
+#right > div > label > input:focus {
+    height: 30px;
+    width: 84%;
+    border: 1px solid #86C0EE;
+}
+#right > button:hover {
+    background-color: #679966;
+    cursor: pointer;
+}

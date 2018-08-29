@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        form {
+            margin-left: 15px;
+            width: 5%;
+        }
+        form label {
+            display: inline-block;
+            width: 130px;
+        }
+        form input {
+            height: 20px;
+            margin-bottom: 5px;
+        }
+        #form7 {
+            width: 110px;
+        }
+        #specfields {
+            display: none;
+        }
+        button {
+            margin-left: 15px;
+            display: inline-block;
+        }
+    </style>
+    <script src="01-WebinarRegistrationForm.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <form>
+        <label for="form1">Име и фамилия:</label>
+        <input type="text" id="form1"/>
+        <label for="form2">Адрес:</label>
+        <input type="text" id="form2"/>
+        <label for="form3">Населено място:</label>
+        <input type="text" id="form3"/>
+        <label for="form4">Пощенски код:</label>
+        <input type="text" id="form4"/>
+        <label for="form5">Email:</label>
+        <input type="text" id="form5"/>
+        <label for="form6">Телефон:</label>
+        <input type="text" id="form6"/>
+        <label for="form7">Дата на семинара:</label>
+        <input type="text" id="form7" placeholder="mm/dd/yyyy"/>
+        <label for="check" id="radiolabel"><input type="checkbox" onclick="showSpec()" id="check">Желая фактура</label>
+        <div id="specfields">
+            <label for="form8">Фирма/Организация:</label>
+            <input type="text" id="form8"/>
+            <label for="form9">МОЛ:</label>
+            <input type="text" id="form9"/>
+            <label for="form10">ЕИК:</label>
+            <input type="text" id="form10"/>
+            <label for="form11">ИН по ДДЦ:</label>
+            <input type="text" id="form11"/>
+            <label for="form12">Адрес:</label>
+            <input type="text" id="form12"/>
+        </div>
+    </form>
+    <button>Реистрирай се</button>
+    <button>Изчисти</button>
+</div>
+</body>
+</html>

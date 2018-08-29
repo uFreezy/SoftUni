@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Tweets";
+}
+
+<div class="row">
+    @Html.Partial("~/Views/Shared/_PostTweet.cshtml")
+
+    <div class="row" id="tweets">
+        @Html.Action("GetTweets", "Tweet")
+    </div>
+</div>
+
+@section Scripts{
+
+    <script>
+        $(document).ready(function() {
+
+            var tweetHub = $.connection.tweet;
+
+            //console.log("I'm in the outter function.");
+
+            tweetHub.client.receiveTweets = function() {
+                $("#tweets").load("/Tweet/GetTweets");
+            };
+            $.connection.hub.start();
+        });
+    </script>
+}

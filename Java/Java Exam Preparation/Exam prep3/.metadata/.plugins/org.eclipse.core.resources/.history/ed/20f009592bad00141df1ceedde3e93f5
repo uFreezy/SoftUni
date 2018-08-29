@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+
+public class WeirdStrings {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		String rawInp = input.nextLine();
+		rawInp = rawInp.replaceAll("[\\(\\)\\|\\/\\u005c\\ ]", ""); // hell
+		//awInp = rawInp.replaceAll("[0-9]", )
+		String[] words = rawInp.split("\\W"); // digits have to be added;
+		List<String> wordsList = new LinkedList<String>(Arrays.asList(words));
+		
+		for(int i = 0; i < wordsList.size(); i++) {
+			if(wordsList.get(i).equals(" ") || wordsList.get(i).equals("")) {
+				wordsList.remove(i);
+			}
+		}
+//		for(String ele : words) {
+//			System.out.println(ele);;
+//		}
+		for(String ele : wordsList) {
+			System.out.println(ele);
+		}
+		for(int a = 0; a < wordsList.size(); a++) {
+			for(int i = 0; i < wordsList.size() - a - 3; i++) {
+				int consecW1 = getWeight(wordsList.get(i).toCharArray()) 
+						+  getWeight(wordsList.get(i+1).toCharArray());
+				int consecW2 = getWeight(wordsList.get(i+2).toCharArray()) 
+						+  getWeight(wordsList.get(i+3).toCharArray());
+				if(consecW1 > consecW2) {
+					String buffer = wordsList.get(i);
+					String buffer2 = wordsList.get(i+1);
+					wordsList.set(i, wordsList.get(i+2));
+					wordsList.set(i+1,wordsList.get(i+3));
+					wordsList.set(i+2, buffer);
+					wordsList.set(i+3, buffer2);
+				}
+			}
+		}
+		for(String ele : wordsList) {
+			System.out.printf("%s - %s",ele,getWeight(ele.toCharArray()));
+			System.out.println();
+		}
+		
+	}
+	public static int getWeight(char[] c) {
+		int result = 0;
+		for(int i = 0; i < c.length; i++) {
+			result += (Character.isUpperCase(c[i]) ? 1 + (c[i] - 'A') : 1 + (c[i] - 'a'));
+		}
+		return result;
+	}
+
+}

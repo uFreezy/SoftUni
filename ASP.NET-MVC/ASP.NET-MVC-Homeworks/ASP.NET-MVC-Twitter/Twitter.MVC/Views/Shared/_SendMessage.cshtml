@@ -1,0 +1,11 @@
+﻿<div class="row">
+    @using (Html.BeginForm("PostMessage", "Messages", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.Editor("UserName")
+        //<input type="text" name="UserName"/>
+        @Html.TextArea("Text", new {@class = "form-control noresize"})
+
+        <input type="submit" value="Submit" class="btn btn-default"/>
+    }
+</div>

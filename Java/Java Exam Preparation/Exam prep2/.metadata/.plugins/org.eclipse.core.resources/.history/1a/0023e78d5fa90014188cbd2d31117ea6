@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class test {
+
+	public static void main(String[] args) {
+		
+		
+		List<String> asd = new ArrayList<String>();
+		asd.add("pesho 5656");
+		asd.add("gosho 878");
+		
+		String output = asd.get(0).split(" ").toString();
+		System.out.println(output);
+
+	}
+
+}

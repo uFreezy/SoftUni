@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class MagicSum {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int d = input.nextInt();
+		input.nextLine();
+		List<Integer> values = new ArrayList<Integer>();
+		
+		while(input.nextLine() != "End") {
+			values.add(input.nextInt());
+			input.nextLine();
+		}
+		for(Integer ele : values) {
+			System.out.println(ele);
+		}
+
+		
+	}
+
+}

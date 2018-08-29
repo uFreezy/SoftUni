@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Largest3Rect {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String getInp =  input.nextLine();
+		int rectNumbs =  getInp.length() - getInp.replaceAll("x", "").length();
+		String[] split = new String[rectNumbs*2];
+		int[] rectSums = new int[rectNumbs];
+		int count = 0;
+		int maxValue = 0;
+		
+		//System.out.println(rectNumbs);
+		split = getInp.split("x|\\["); // \u0046
+		for(int i = 0; i < split.length; i++) {
+			split[i] = split[i].replaceAll("\\W", "");
+			//System.out.println(split[i]);
+		}
+//		System.out.println("~" + rectNumbs*2);
+//		System.out.println(split[0]);
+		for(int i = 1; i < split.length ; i += 2) {
+			int sum = Integer.parseInt(split[i]) * Integer.parseInt(split[i+1]);
+			rectSums[count] = sum;
+			//System.out.println(rectSums[count]);
+			count++;
+		}
+		//System.out.println(rectSums.length);
+		for(int i = 0; i < rectSums.length - 2; i++) {
+			int sum1 = rectSums[i] + rectSums[i+1] + rectSums[i+2];
+			int sum2 = rectSums[i+1] + rectSums[i+2] + rectSums[i+3];
+			if(sum1 > sum2) {
+				maxValue = sum1;
+			}
+			else {
+				maxValue = sum2;
+			}
+		}
+		System.out.println(maxValue);
+
+	}
+
+}

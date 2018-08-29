@@ -1,0 +1,100 @@
+body {  background-color: darkgray;  }
+#header {
+    font-size: 170%;
+    color: #003366;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#description {
+    color: gray;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+}
+#register {
+    position: absolute;
+    top: 110px;
+    left: 20px;
+    width: 300px;
+}
+#register form input {
+    margin: 5px;
+    height: 25px;
+    width: 300px;
+}
+#registerbutton {
+    height: 30px;
+    width: 130px;
+    border: 2px solid #003366;
+    background-color: darkgray;
+    color: #003366;
+    position: absolute;
+    left: 180px;
+}
+#registertext1 {
+    font-family: sans-serif;
+    font-size: 120%;
+    color: gray;
+    margin-left: 3px;
+}
+#registertext2 {
+    font-family: sans-serif;
+    font-size: 120%;
+    color: darkslateblue;
+}
+#login {
+    position: absolute;
+    top: 120px;
+    left: 340px;
+    width: 310px;
+    height: 210px;
+    background-color: #003366;
+}
+#login form input {
+    margin: 5px;
+    height: 27px;
+    width: 280px;
+}
+#login form {  padding-top: 30px;  }
+#radiobutton {
+    -moz-appearance: checkbox;
+    -webkit-appearance: checkbox;
+    height: auto !important;
+    width: auto !important;
+}
+#radiolabel {
+    position: absolute;
+    color: white;
+    top: 113px;
+    left: 2px;
+}
+#loginbutton {
+    position: absolute;
+    top: 120px;
+    left: 165px;
+    height: 30px;
+    width: 120px;
+    border: 2px solid orange;
+    background-color: #003366;
+    color: white;
+}
+#logintext {
+    font-family: sans-serif;
+    color: white;
+    font-size: 120%;
+    font-weight: bold;
+    margin-left: 10px;
+    position: absolute;
+    top: 5px;
+}
+#passlink {
+    position: absolute;
+    top: 150px;
+    left: 183px;
+}
+::-webkit-input-placeholder { padding-left: 10px; }
+::-moz-placeholder { padding-left: 10px; } /* firefox 19+ */
+:-ms-input-placeholder { padding-left: 10px; } /* ie */
+input:-moz-placeholder { padding-left: 10px; }

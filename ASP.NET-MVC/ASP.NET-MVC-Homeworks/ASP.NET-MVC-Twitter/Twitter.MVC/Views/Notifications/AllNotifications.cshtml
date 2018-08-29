@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Notifications";
+}
+
+<h2>Notifications</h2>
+<div class="row" id="notifications">
+    @Html.Action("GetNotifications", "Notifications")
+</div>
+<input type="hidden" value="@User.Identity.GetUserName()" id="user"/>
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+            var notificationHub = $.connection.notifications;
+            var userName = $("#user").val().toString();
+
+            console.log(userName);
+            $.connection.hub.qs = { 'username': userName };
+
+            console.log("I'm in the script");
+
+            notificationHub.client.receiveNotification = function() {
+                $("#notifications").load("/Notifications/GetNotfications");
+
+                console.log("I'm in the inner function.");
+            };
+            $.connection.hub.start();
+        });
+    </script>
+}

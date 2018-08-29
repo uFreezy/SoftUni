@@ -1,0 +1,118 @@
+body {
+    background: #009933;
+}
+table {
+     border: 2px solid #000;
+     border-collapse: separate;
+     border-left: 0;
+     border-radius: 10px;
+     border-spacing: 0;
+ }
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-collapse: separate;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+    border-left: 2px solid #000;
+}
+td {
+    border-top: 2px solid #000;
+}
+thead:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child {
+    border-radius: 10px 0 0 0;
+    background: #FFCC00;
+}
+thead:last-child tr:last-child th:first-child, tbody:last-child tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+thead tr th{
+    background-color: #FFCC00;
+    font-size: 150%;
+}
+thead tr th:last-of-type{
+    border-radius: 0 10px 0 0;
+}
+tr:last-of-type td:last-of-type{
+    border-radius: 0 0 10px 0;
+}
+tr:nth-of-type(odd) td {background: #ffffff}
+tr:nth-of-type(even) td {background: #808080}
+select, select option {color: red;}
+.button_red div {
+    display: inline-block;
+    background: url("images/button_red.png") no-repeat center center;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    vertical-align: bottom;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+.button_green div {
+    display: inline-block;
+    background: url("images/button_green.png") no-repeat center center;
+    background-size: 27px;
+    width: 27px;
+    height: 27px;
+    vertical-align: bottom;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+.flag div {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+#brasil {
+    background: url("images/brasil.png") no-repeat center center;
+    background-size: 20px;
+}
+#mexico {
+    background: url("images/mexico.png") no-repeat center center;
+    background-size: 20px;
+}
+#spain {
+    background: url("images/spain.gif") no-repeat center center;
+    background-size: 20px;
+}
+#netherlands {
+    background: url("images/netherlands.jpg") no-repeat center center;
+    background-size: 20px;
+}
+#italy {
+    background: url("images/italy.png") no-repeat center center;
+    background-size: 20px;
+}
+#england {
+    background: url("images/england.png") no-repeat center center;
+    background-size: 20px;
+}
+#argentina {
+    background: url("images/argentina.gif") no-repeat center center;
+    background-size: 20px;
+}
+#bosnia {
+    background: url("images/bosnia.png") no-repeat center center;
+    background-size: 20px;
+}
+#germany {
+    background: url("images/germany.gif") no-repeat center center;
+    background-size: 20px;
+}
+#portugal {
+    background: url("images/portugal.png") no-repeat center center;
+    background-size: 20px;
+}

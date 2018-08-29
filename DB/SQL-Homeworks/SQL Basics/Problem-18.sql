@@ -1,0 +1,1 @@
+SELECT e.* , d.* FROM Employees e INNER JOIN Addresses d ON e.EmployeeID = d.AddressID

@@ -1,0 +1,53 @@
+body {  background: url(resources/formBackground.jpg);  }
+input:focus, textarea:focus {  border: 2px solid blue;  }
+table td {
+    border: 1px solid white;
+    background: rgba(255,255,255, 0.4);
+    border-radius: 5px;
+    width: 350px;
+    height: 10px;
+}
+input {
+    margin-left: 70px;
+    border: 1px solid white;
+    border-radius: 2px;
+    height: 20px;
+}
+#post {  margin-left: 52px;  }
+#country {  margin-left: 62px;  }
+span {  margin-right: 100px;  }
+textarea {
+    height: 90px;
+    margin-left: 113px;
+}
+#biglabel {
+    position: absolute;
+    display: inline-block;
+    margin-top: 1px;
+    margin-left: 3px;
+}
+#option1 {  margin-left: 8px;  }
+#option2 {  margin-left: 10px;  }
+#option3 {  margin-left: 10px;  }
+#cardtype {  padding-bottom: 10px;  }
+#buttondiv {
+    padding-top: 15px;
+    padding-left: 140px;
+}
+button {
+    height: 30px;
+    width: 95px;
+    background-color: #00143C;
+    color: white;
+    border: 1px solid #00143C;
+    border-radius: 25px;
+    font-size: 100%;
+}
+#card {  margin-left: 30px;  }
+#code {  margin-left: 26px;  }
+#name {  margin-left: 24px;  }
+.headers {
+    font-size: 110%;
+    color: white;
+}
+

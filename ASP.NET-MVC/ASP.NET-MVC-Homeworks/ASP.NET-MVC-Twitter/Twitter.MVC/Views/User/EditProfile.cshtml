@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "EditProfile";
+}
+
+<h2>Edit Profile</h2>
+
+<div class="row">
+    @using (Html.BeginForm("EditProfile", "User"))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HttpMethodOverride(HttpVerbs.Put)
+
+        <label for="username">Username: </label>
+        <input type="text" name="UserName" placeholeder="Username" id="username"/>
+        <label for="password">Password:</label>
+        <input type="password" name="Password" placeholeder="" id="password"/>
+        <label for="phone">Phone number:</label>
+        <input type="text" name="PhoneNumber" placeholeder="Phone number" id="phone"/>
+        <input type="submit"/>
+    }
+</div>

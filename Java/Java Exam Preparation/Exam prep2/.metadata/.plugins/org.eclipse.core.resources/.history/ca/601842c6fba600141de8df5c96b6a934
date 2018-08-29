@@ -1,0 +1,40 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class ThreeLargestNumbers {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		float[] values = new float[n];
+		
+		for(int i = 0; i < n; i++) {
+			values[i] = input.nextFloat();
+		}
+		Arrays.sort(values);
+		if(n <= 3) {
+			for(int a = n-1; a >= 0; a--) {
+				if(values[a] % 1 > 0) {
+					System.out.printf("%f \n",values[a]);
+				}
+				else {
+					System.out.printf("%.0f \n",values[a]);
+				}
+			}
+		}
+		else {
+			for(int a = n-1; a > n-4; a--) {
+				if(values[a] % 1 > 0) {
+					System.out.printf("%f \n",values[a]);
+				}
+				else {
+					System.out.printf("%.0f \n",values[a]);
+				}
+			}
+		}
+
+	}
+
+}

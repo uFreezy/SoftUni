@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<matches>
+  <match>
+    <home-country code="ES">Spain</home-country>
+    <away-country code="BG">Bulgaria</away-country>
+    <leauge>FIFA 2018 World Cup</leauge>
+  </match>
+  <match>
+    <home-country code="ES">Spain</home-country>
+    <away-country code="DE">Germany</away-country>
+  </match>
+  <match date-time="06-26-1994 11:35">
+    <home-country code="BG">Bulgaria</home-country>
+    <away-country code="GR">Greece</away-country>
+    <goals>4-0</goals>
+  </match>
+  <match date-time="06-30-1994 06:35">
+    <home-country code="BG">Bulgaria</home-country>
+    <away-country code="AR">Argentina</away-country>
+    <goals>2-0</goals>
+  </match>
+  <match date="07-10-1994">
+    <home-country code="DE">Germany</home-country>
+    <away-country code="BG">Bulgaria</away-country>
+    <goals>1-2</goals>
+  </match>
+  <match date="03-25-2015">
+    <home-country code="DK">Denmark</home-country>
+    <away-country code="US">United States</away-country>
+    <goals>3-2</goals>
+  </match>
+  <match date-time="03-25-2015 07:00">
+    <home-country code="GE">Georgia</home-country>
+    <away-country code="MT">Malta</away-country>
+    <goals>2-0</goals>
+  </match>
+  <match date-time="06-13-2015 09:45">
+    <home-country code="AL">Albania</home-country>
+    <away-country code="FR">France</away-country>
+    <leauge>FIFA 2018 World Cup</leauge>
+  </match>
+</matches>

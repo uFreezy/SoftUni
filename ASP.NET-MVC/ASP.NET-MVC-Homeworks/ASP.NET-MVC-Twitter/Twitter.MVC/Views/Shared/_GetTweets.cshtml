@@ -1,0 +1,54 @@
+﻿@using Microsoft.AspNet.Identity
+@model IEnumerable<Twitter.MVC.Models.TweetViewModel>
+@{
+    for (var i = 0; i < Model.Count(); i++)
+    {
+        var tweet = Model.Skip(i).FirstOrDefault();
+
+        <div class="row">
+            <h3>@tweet.Username</h3>
+            <h4>@tweet.PostedOn</h4>
+            <p>
+                @tweet.Text
+            </p>
+            @{
+                if (User.Identity.GetUserName() != tweet.Username)
+                {
+                    <a href='@Url.Action("Retweet", "Tweet", new {tweetId = tweet.Id})'>Retweet</a>
+                    <a href='@Url.Action("Favourite", "Tweet")'>Favourite</a>
+                }
+            }
+            <a href="#" data-toggle="modal" data-target="#replyTweet" class="modalLink" onclick="$('#ReplyToId').val(@tweet.Id)">Reply</a>
+
+            <a href="#">Report</a>
+            @{
+                foreach (var reply in tweet.Replies)
+                {
+                    <div class="body-content">
+                        <h4>@reply.Username</h4>
+                        <h5>@reply.PostedOn</h5>
+                        <p>
+                            @reply.Text
+                        </p>
+                    </div>
+                }
+            }
+
+        </div>
+    }
+
+    @Html.Partial("~/Views/Shared/_ModalForm.cshtml")
+
+    @Html.ActionLink("Previous page", "Index",
+        new
+        {
+            startIndex = ViewBag.StartIndex - ViewBag.PageSize,
+            pageSize = ViewBag.PageSize
+        }, new {@class = "btn btn-primary"})
+    @Html.ActionLink("Next page", "Index",
+        new
+        {
+            startIndex = ViewBag.StartIndex + ViewBag.PageSize,
+            pageSize = ViewBag.PageSize
+        }, new {@class = "btn btn-primary"})
+}

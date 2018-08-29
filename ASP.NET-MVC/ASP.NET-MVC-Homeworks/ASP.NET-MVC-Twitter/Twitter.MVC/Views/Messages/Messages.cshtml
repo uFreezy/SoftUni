@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Twitter.MVC.Models.MessageViewModel>
+@{
+    ViewBag.Title = "Messages";
+}
+
+<h2>Messages</h2>
+
+@{
+    if (User.Identity.IsAuthenticated)
+    {
+        @Html.Partial("~/Views/Shared/_SendMessage.cshtml")
+    }
+
+
+    if (Model != null)
+    {
+        foreach (var m in Model)
+        {
+            <div class="row">
+                <h2>@Html.ActionLink(m.Sender, "GetConversation", new {friendName = m.Sender})</h2>
+                <h3>Count: @m.MessageCount</h3>
+            </div>
+        }
+    }
+}

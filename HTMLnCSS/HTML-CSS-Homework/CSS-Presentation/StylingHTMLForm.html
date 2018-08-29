@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="StylingHTMLForm.css" />
+</head>
+<body>
+<div>
+    <p><span class="headers">Step 1: Your details:</span></p>
+    <table cellspacing="2" cellpadding="10">
+        <tr>
+            <td>
+                <form>
+                    <label>Name<input type="text" placeholder="First and last name" /></label>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <label>Email<input type="text" placeholder="example@domain.com" /></label>
+                </form>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <label>Phone<input type="text" placeholder="eg. +447500000000" /></label>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <p><span class="headers">Step 1: Delivery address</span></p>
+    <table cellspacing="2" cellpadding="10">
+        <tr>
+            <td>
+                <form>
+                    <label id="biglabel" for="bigbox">Address</label>
+                    <textarea id="bigbox"></textarea>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <label>Post code<input type="text" id="post" /></label>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <label>Country<input type="text" id="country" /></label>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <p><span class="headers">Step 1: Card details:</span></p>
+    <table cellspacing="2" cellpadding="10">
+        <tr>
+            <td>
+                <div id="cardtype">Card type</div>
+                <form>
+                    <input type="radio"  id="option1"/>
+                    <label for="option1"><img src="resources/credit_visa.png" width="30" height="15"/>VISA</label>
+                    <input type="radio" id="option2"/>
+                    <label for="option2"><img src="resources/amex.png" width="30" height="15">AmEx</label>
+                    <input type="radio" id="option3"/>
+                    <label for="option3"><img src="resources/mastercard_icon.gif" width="30" height="15">Mastercard</label>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <label>Card number<input type="text" id="card" /></label>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <label>Security code<input type="text" id="code" /></label>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form>
+                    <label>Name on card<input type="text" id="name" placeholder="exact name as on the card" /></label>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <div id="buttondiv">
+        <button>Buy it!</button>
+    </div>
+</div>
+</body>
+</html>

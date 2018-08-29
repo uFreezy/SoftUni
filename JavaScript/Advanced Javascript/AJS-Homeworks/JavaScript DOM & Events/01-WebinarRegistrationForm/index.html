@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="wrapper">
+    <h2>Регистрация за уебинар</h2>
+    <form>
+        <label for="fullname">Име и фамилия:</label>
+        <input type="text" id="fullname"/>
+        <label for="address">Адрес:</label>
+        <input type="text" id="address"/>
+        <label for="residence">Населено място:</label>
+        <input type="text" id="residence"/>
+        <label for="postcode">Пощенски код:</label>
+        <input type="text" id="postcode"/>
+        <label for="email">Email:</label>
+        <input type="text" id="email"/>
+        <label for="phonenumber">Телефон:</label>
+        <input type="text" id="phonenumber"/>
+        <label for="seminardate">Дата на семинара:</label>
+        <input type="text" id="seminardate" placeholder="mm/dd/yyyy"/>
+        <label for="check" id="checklabel"><input type="checkbox" id="check">Желая фактура</label>
+        <div id="specfields">
+            <label for="organisation">Фирма/Организация:</label>
+            <input type="text" id="organisation"/>
+            <label for="mol">МОЛ:</label>
+            <input type="text" id="mol"/>
+            <label for="eik">ЕИК:</label>
+            <input type="text" id="eik"/>
+            <label for="in">ИН по ДДЦ:</label>
+            <input type="text" id="in"/>
+            <label for="orgadress">Адрес:</label>
+            <input type="text" id="orgadress"/>
+        </div>
+    </form>
+    <button>Реистрирай се</button>
+    <button>Изчисти</button>
+</div>
+<script src="formShow.js"></script>
+</body>
+</html>

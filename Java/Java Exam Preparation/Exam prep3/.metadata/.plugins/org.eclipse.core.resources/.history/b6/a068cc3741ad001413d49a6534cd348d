@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class Nuts {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		input.nextLine();
+		List<String> getInp = new ArrayList<String>();
+		
+		for(int i = 0; i < n; n++) {
+			getInp.add(input.nextLine());
+		}
+		for(String ele : getNamesByOrder(getInp)) {
+			System.out.println(ele);
+		}
+
+	}
+	public static List<String> getNamesByOrder(List<String> inp){
+		List<String> out = new ArrayList<String>();
+		for(String ele : inp) {
+			out.add(ele.substring(0, ele.indexOf(" ")));
+		}
+		return out;
+	}
+	
+}

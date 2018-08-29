@@ -1,0 +1,188 @@
+body {
+    background-image: url("resources/Problem-02/background-flowers.jpg");
+    font-size: 100%;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#wrapper > header, .left , .right, section article, footer {
+    background-color: rgba(255,255,255, 0.5);
+    border: 1px solid black;
+}
+/* header styles */
+header {
+    width: 80%;
+    padding: 1%;
+    margin-left: auto;
+    margin-right: auto;
+}
+header h1 {
+    width: 100%;
+}
+header h1 img {
+    width: 250px;
+    height: 50px;
+}
+header h1 span {
+    float: right;
+}
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+header nav ul li {
+    list-style-type: none;
+    background-color: rgb(235,42,123);
+    border: 1px solid black;
+    margin-right: 1%;
+    padding: 5px 30px 5px 30px;
+    text-align: center;
+}
+header nav ul li a {
+    color: #ffffff;
+}
+/* end of header styles*/
+/* body styles */
+.left, .right, section {
+    display: inline-block;
+    margin-top: 1%;
+    width: 15%;
+}
+.left ul, .right ul, section article div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 5%;
+    font-size: 0.9em;
+}
+.left {
+    margin-left: 9%;
+    vertical-align: top;
+}
+.right {
+    float: right;
+    clear: right;
+    margin-right: 9%;
+}
+section {
+    width: 47%;
+    margin-left: 2%;
+    margin-bottom: 1.5%;
+}
+section header h1{
+    font-size: 150%;
+ }
+section article div{
+    padding-bottom: 3%;
+    padding-left: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+section article div img {
+    height: 24%;
+    width: 24%;
+    padding: 2px;
+}
+/* end of body styles */
+/*footer styles */
+footer {
+    width: 82.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer h2 {
+    text-align: center;
+}
+/*end of footer styles */
+/* media queries */
+@media (max-width: 960px) {
+    header {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .left,.right, section {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .right {
+        margin-right: 21%;
+        resize: none;
+    }
+    .left ul , .right ul {
+        font-size: 0.8em;
+    }
+    .right ul {
+        padding-right: 10%;
+    }
+    section article div img {
+        width: 32%;
+        height: 32%;
+    }
+    section article div img:nth-child(7) { margin-right: 16.5% }
+    section article div img:last-child {  margin-left: 16.5%  }
+    footer {
+        width: 100%;
+    }
+}
+@media (max-width: 780px) {
+    #wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    section, .left, .right {
+        margin-bottom: 10px;
+    }
+    header nav ul {
+        justify-content: center;
+        margin-left: 0;
+        padding-left: 0;
+        align-items: stretch;
+    }
+    header nav ul li {
+        margin-right: 1.5%;
+        padding: 7px 35px 7px 35px;
+    }
+    section {
+        order: 1;
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .left {
+        order: 2;
+        width: 100%;
+    }
+    .right {
+        order: 3;
+        width: 100%;
+        padding-left: 5px;
+        margin-right: 0;
+    }
+    .left ul, .right ul {
+        padding-left: 1%;
+    }
+    footer {
+        order: 4;
+    }
+}
+@media (max-width: 640px) {
+    header h1 a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    section article div img {
+        width: 49%;
+        height: 49%;
+    }
+    section article div img:nth-child(7), section article div img:last-child  { margin: 0 }
+}
+/* end of media queries */

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Twitter.MVC.Models.NotificationsViewModel>
+@{
+    if (Model == null)
+    {
+        <div class="row">
+            <h2>No new notifications.</h2>
+        </div>
+    }
+
+    else
+    {
+        for (var i = 0; i < Model.Count(); i++)
+        {
+            <div class="container">
+                <h3>@Model.Skip(i).FirstOrDefault().Sender</h3>
+                <h4>@Model.Skip(i).FirstOrDefault().PostedOn</h4>
+                <p>
+                    @Model.Skip(i).FirstOrDefault().Content
+                </p>
+            </div>
+        }
+    }
+}

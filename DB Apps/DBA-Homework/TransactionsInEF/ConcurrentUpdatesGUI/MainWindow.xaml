@@ -1,0 +1,10 @@
+﻿<Window x:Class="ConcurrentUpdatesGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="News" Height="150.149" Width="122.955">
+    <Grid>
+        <Button Content="Edit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" Margin="10,10,0,0" Height="38" Click="Edit"/>
+        <Button Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" Margin="10,66,0,0" Height="38" Click="Exit"/>
+
+    </Grid>
+</Window>

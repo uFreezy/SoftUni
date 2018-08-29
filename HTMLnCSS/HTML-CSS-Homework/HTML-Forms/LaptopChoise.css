@@ -1,0 +1,83 @@
+#head {
+    font-size: 200%;
+    font-family: sans-serif;
+    color: #003366;
+    margin-left: 5px;
+}
+a {
+    text-decoration: none;
+}
+#productholder {
+    width: 600px;
+    height: 400px;
+    max-height: 410px;
+    padding-top: 5px;
+}
+.products {
+    border: 1px solid lightblue;
+    border-radius: 7px;
+    border-bottom-right-radius: 0;
+    width: 164px;
+    height: 200px;
+    display: inline-block;
+    margin: 5px;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    color: #003366;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: block;
+    padding: 3px 3px 0;
+}
+
+.description {
+    color: #003366;
+    font-size: 110%;
+}
+.price {
+    display: block;
+    background-color: #003366;
+    color: white;
+    font-size: 120%;
+    font-family: sans-serif;
+    border-top-left-radius: 10px;
+    text-align: center;
+    float: right;
+    width: 100px;
+    height: 35px;
+}
+#sliders {
+    background-color: #F7FCFC;
+    width: 220px;
+    height: 438px;
+    position: absolute;
+    left: 550px;
+    top: 25px;
+    border: 1px solid lightblue;
+}
+.slide {
+    display: inline-block;
+    color: #003366;
+    left: 650px;
+}
+.slideheader {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 120%;
+}
+.desc {
+    display: inline-block;
+    width: 100%;
+}
+.rightdesc {
+    float: right;
+}
+input {
+    width: 216px;
+}

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+
+public class ex04 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String[] foods = {"Cram","Lembas","Apples","Melon","HoneyCake","Mushrooms"};
+		String[] moods = {"Angry","Sad","Happy","Special JavaScript mood"};
+		int getMood = input.nextInt();
+		input.nextLine();
+		String[] getMeal = input.nextLine().split(",");
+		
+		for(String ele : getMeal) {
+			ele = ele.replaceAll("(\\W)|(_)","");
+			System.out.println(ele);
+		}
+		
+
+	}
+
+}

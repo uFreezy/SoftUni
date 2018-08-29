@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="FlightOrder.css" />
+</head>
+<body>
+<header>
+    <span id="head"> FLIGHT ORDER </span>
+</header>
+<main>
+    <div>
+        <p>
+        <span class="formfont">From<br/></span>
+        <select class="dropdown">
+            <option value="none">enter a city</option>
+            <option value="city1">City 1</option>
+        </select>
+        <br/>
+        </p>
+        <span class="formfont">Departure date<br/></span>
+        <form class="date">
+            <input type="date"/>
+        </form>
+        <span class="formfont">Return date<br/></span>
+        <form class="date">
+            <input type="date"/>
+        </form>
+
+        <span class="formfont">12+</span>
+        <span class="formfont" id="age1">0-12</span>
+        <span class="formfont" id="age2">0-2</span>
+        <form>
+            <input type="number" min="0" max="12" value="" size="15" placeholder="0" />
+            <input type="number" min="0" max="12" value="" size="15" placeholder="0" />
+            <input type="number" min="0" max="12" value="" size="15" placeholder="0" />
+        </form>
+    </div>
+    <div id="to">
+        <span class="formfont">To<br/></span>
+        <select class="dropdown">
+            <option value="none">enter a city</option>
+            <option value="option1">Option 1</option>
+        </select>
+        <form>
+            <input type="radio" id="radio">
+            <label for="radio" id="radiolabel"><span class="formfont">Prefer directs<br/></span></label>
+        </form>
+        <span class="formfont">Time interval<br/></span>
+        <form class="time">
+            <input type="time" />
+            <input type="time" />
+            <br/>
+        </form>
+        <span class="formfont">Time interval<br/></span>
+        <form class="time">
+            <input type="time" />
+            <input type="time" />
+            <br/>
+        </form>
+        <span class="formfont">Choose class</span>
+        <form>
+            <select class="dropdown">
+                <option value="economy">Economy</option>
+                <br/>
+            </select>
+        </form>
+        <form>
+            <button>Search</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>

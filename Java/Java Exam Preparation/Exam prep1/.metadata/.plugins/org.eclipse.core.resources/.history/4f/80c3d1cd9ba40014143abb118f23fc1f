@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class CouplesFrequency {
+	private static void getFrequency() {
+		
+	}
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		
+		List eles = new ArrayList();
+		Scanner input = new Scanner(System.in);
+		String inp = input.nextLine();
+		eles.add(inp.split(" "));
+		
+		for(int i = 0; i < eles.size(); i++ ) {
+			System.out.println(eles.get(i));
+		}
+	}
+
+}

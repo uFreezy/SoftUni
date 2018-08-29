@@ -1,0 +1,10 @@
+
+public class Largest3Rect {
+
+	public static void main(String[] args) {
+		String asd = "asd";
+		System.out.println(asd.charAt(0));
+
+	}
+
+}

@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class MagicSum {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int d = input.nextInt();
+		input.nextLine();
+		List<Integer> values = new ArrayList<Integer>();
+		
+		while(true) {
+			try {
+				values.add(input.nextInt());
+			}
+			catch(Exception e) {
+				break;
+			}
+			input.nextLine();
+		}
+		for(int a = 0; a < values.size(); a++) {
+			for(int b = 0; b < values.size(); b++) {
+				for(int c = 0; c < values.size(); c++) {
+					if((values.get(a) + values.get(b) + values.get(c)) % d == 0) {
+						String output = String.format("(%s + %s + %s)  %s = 0",values.get(a),
+								values.get(b),values.get(c), d);
+						System.out.printf(output);
+					}
+				}
+			}
+		}
+
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+
+public class FormattingNumbers {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		float a = input.nextFloat();
+		float b = input.nextFloat();
+		float c = input.nextFloat();
+		String getHex = Integer.toHexString((int)a);
+		String getBin = Integer.toBinaryString((int)a);
+		
+		System.out.println(getBin);
+		
+		
+
+	}
+
+}

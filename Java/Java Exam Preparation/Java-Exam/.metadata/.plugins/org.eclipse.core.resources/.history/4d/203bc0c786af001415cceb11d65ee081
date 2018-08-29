@@ -1,0 +1,15 @@
+
+public class ex03 {
+
+	public static void main(String[] args) {
+		String asd = "Melon";
+		String dsa = "MeLoN";
+		
+		if(asd.equalsIgnoreCase(dsa)) {
+			System.out.println("true");
+		}
+		
+
+	}
+
+}

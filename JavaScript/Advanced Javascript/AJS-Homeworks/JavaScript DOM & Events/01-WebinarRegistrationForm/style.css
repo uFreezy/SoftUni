@@ -1,0 +1,32 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+#wrapper{
+    background-color: lightpink;
+    width: 20%;
+}
+form {
+
+    margin-left: 15px;
+    width: 5%;
+}
+form label {
+    display: inline-block;
+    width: 130px;
+}
+form input {
+    height: 20px;
+    margin-bottom: 5px;
+}
+#seminardate {
+    width: 110px;
+}
+#specfields {
+    display: none;
+}
+button {
+    margin-left: 15px;
+    display: inline-block;
+}

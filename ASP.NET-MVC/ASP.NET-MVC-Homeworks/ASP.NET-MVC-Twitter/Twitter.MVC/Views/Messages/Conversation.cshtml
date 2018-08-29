@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Twitter.MVC.Models.DiscussionViewModel>
+@{
+    ViewBag.Title = "Conversation";
+}
+
+<h2>Conversation</h2>
+<div class="row">
+    @{
+        foreach (var m in Model)
+        {
+            <div class="row">
+                <h3>@m.UserName</h3>
+                <h6>@m.SentOn</h6>
+                <p>
+                    @m.Text
+                </p>
+            </div>
+        }
+        <div class="row">
+            @Html.Partial("~/Views/Shared/_SendMessage.cshtml")
+        </div>
+    }
+</div>

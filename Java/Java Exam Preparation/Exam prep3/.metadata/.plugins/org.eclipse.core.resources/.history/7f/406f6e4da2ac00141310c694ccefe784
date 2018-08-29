@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+
+public class WeirdStrings {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		String rawInp = input.nextLine();
+		//String pattern = "/([\u002f\u0028\u0029\u005c])/g";
+		rawInp.replaceAll("\\(", "");
+		//(\u0028)(\u0029)(\u005c)
+		System.out.println(rawInp);
+
+	}
+
+}

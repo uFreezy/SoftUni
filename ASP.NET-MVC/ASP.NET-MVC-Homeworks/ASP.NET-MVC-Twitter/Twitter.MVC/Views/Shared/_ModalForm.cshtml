@@ -1,0 +1,21 @@
+﻿<div id="replyTweet" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Reply</h4>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("PostTweet", "Tweet", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.TextArea("Text", new {@class = "form-control noresize"})
+                    <input type="hidden" name="ReplyToId" id="ReplyToId" value=""/>
+
+                    <input type="submit" value="Submit"/>
+                }
+            </div>
+        </div>
+    </div>
+</div>

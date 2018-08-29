@@ -1,0 +1,1 @@
+SELECT CONVERT(NVARCHAR(50), Getdate(), 113) 

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;check&apos; in &apos;PythagoreanNumbs.main(...)&apos; to &apos;skip&apos;&#x0A;- Original project: &apos;Problems&apos;&#x0A;- Original element: &apos;PythagoreanNumbs.main(String[]).check&apos;&#x0A;- Renamed element: &apos;check&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;check&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{PythagoreanNumbs.java[PythagoreanNumbs~main~\[QString;@check!201!222!209!213!QBoolean;!0!false" name="skip" references="true" stamp="1421863394242" version="1.0"/>
+</session>

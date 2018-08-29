@@ -1,0 +1,50 @@
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+public class DaysBetween2Dates {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		Calendar date1 = getDate(input.nextLine());
+		Calendar date2 = getDate(input.nextLine());
+		int daysBetween = 0;
+		
+		input.close();
+		
+		if(date1.compareTo(date2) > 0) {
+			while(date1.after(date2)) {
+				date1.add(Calendar.DAY_OF_MONTH, -1);
+				daysBetween--;
+			}
+		}
+		
+		while(date1.before(date2)) {
+			date1.add(Calendar.DAY_OF_MONTH, 1);  
+		    daysBetween++;
+		}
+		
+        System.out.println(daysBetween);
+	}
+	
+	public static Calendar getDate(String input) {
+		Date date = new Date();
+		DateFormat f = new SimpleDateFormat("dd-MM-yyyy");
+		
+		try {
+			date = f.parse(input);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		Calendar parseDate = Calendar.getInstance();
+		parseDate.setTime(date);
+		
+		return parseDate;
+	}
+
+}

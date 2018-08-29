@@ -1,0 +1,49 @@
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+
+public class WeirdStrings {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		String rawInp = input.nextLine();
+		rawInp = rawInp.replaceAll("[\\(\\)\\|\\/\\u005c]", ""); // hell
+		String[] words = rawInp.split("\\W");
+		TreeMap<Integer,String> map = new TreeMap<Integer,String>();
+		TreeMap<Integer,String> mapDup = new TreeMap<Integer,String>();
+		
+		for(String ele : words) {
+			char[] word = ele.toCharArray();
+			if(map.containsKey(getWeight(word))) {
+				// What should happen if word with that mass already exist.
+				mapDup.put(getWeight(word), ele);
+			}
+			else {
+				map.put(getWeight(word),ele);
+			}
+		}
+		for(int i = 0; i < words.length; i++) {
+			if(words[i] == map.get((map.lowerKey(map.lastKey())))) {
+				System.out.println(map.get(map.lastKey() -1));
+			}
+			if(words[i] == map.get(map.lastKey())) {
+				System.out.println(map.get(map.lastKey()));
+				//break;
+			}
+			//System.out.println(words[i]);
+		}
+		System.out.println(map);
+		//System.out.println(mapDup);
+		
+	}
+	public static int getWeight(char[] c) {
+		int result = 0;
+		for(int i = 0; i < c.length; i++) {
+			result += (Character.isUpperCase(c[i]) ? 1 + (c[i] - 'A') : 1 + (c[i] - 'a'));
+		}
+		return result;
+	}
+
+}

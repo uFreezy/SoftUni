@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Tahoma, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #EEEEEE;
+}
+#wrapper > header {
+    height: auto;
+}
+#wrapper > header  > ul {
+    list-style-type: none;
+    width: 100%;
+    background-color: #384452;
+}
+#wrapper > header > ul > li {
+    display: inline;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+#wrapper > header > ul > li:hover {
+    background-color: #3BBC96;
+}
+#item1:before {
+    content: url("search-job-resources/03-tab01.png");
+    position: relative;
+    left: 15px;
+    top: 27px;
+}
+#item2:before {
+    content: url("search-job-resources/03-tab02.png");
+    position: relative;
+    left: 15px;
+    top: 27px;
+}
+#item3:before {
+    content: url("search-job-resources/03-tab03.png");
+    position: relative;
+    left: 15px;
+    top: 27px;
+}
+#item4:before {
+    content: url("search-job-resources/03-tab04.png");
+    position: relative;
+    left: 15px;
+    top: 27px;
+}

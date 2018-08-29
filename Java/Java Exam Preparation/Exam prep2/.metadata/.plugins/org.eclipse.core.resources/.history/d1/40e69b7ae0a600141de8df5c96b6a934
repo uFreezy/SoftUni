@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+
+public class CountBeers {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int totalBeers = 0;
+		String getInp = "";
+		
+		do {
+			getInp = input.nextLine();
+			String[] value = getInp.split(" ", 1);
+			if(getInp.contains("stacks")) {
+				System.out.println(value);
+			}
+		}
+		while(getInp != "End");
+	}
+
+}

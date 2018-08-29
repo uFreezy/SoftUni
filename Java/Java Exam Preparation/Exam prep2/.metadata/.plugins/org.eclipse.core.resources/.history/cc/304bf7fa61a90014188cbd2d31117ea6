@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+
+
+public class Orders {
+
+	public static String getEle(List<String> list, String eleToSort) {
+		Set<String> clear = new HashSet<String>(); // to remove duplicate names
+		List<String> names = new ArrayList<String>(); // contains the names
+		for(String ele : list) {
+			names.add(ele.split(" ", 1).toString());
+		}
+		clear.addAll(names);
+		names.removeAll(names);
+		names.addAll(clear);
+		Collections.sort(names);
+		Map<String,Integer> map = new HashMap<String,Integer>();
+		for(String ele : names) {
+			map.put(ele, 0);
+		}
+		for(String ele : list) {
+			if(ele.contains(eleToSort)) {
+				String name = ele.split(" ", 1).toString();
+			}
+		}
+		
+	}
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		//Map<String,Integer> dictionary = new HashMap<String,Integer>();
+		
+		for(int i = 0; i < n; i++) {
+			
+		}
+
+	}
+
+}

@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class CouplesFrequency {
+	private static void getFrequency() {
+		
+	}
+	public static void main(String[] args) {
+		
+		List<Integer> eles = new ArrayList<Integer>();
+		Scanner input = new Scanner(System.in);
+		eles.add(input.nextInt());
+		System.out.println(eles.get(1));
+	}
+
+}

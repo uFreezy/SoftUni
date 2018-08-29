@@ -1,0 +1,41 @@
+a {text-decoration: none;}
+ul {list-style-type: none}
+#form {
+    padding-left: 75%;
+}
+table {width: 100%}
+#icon {padding-left: 1%}
+header h1 {padding-left: 2%}
+#left {
+    float: left;
+    width: 20%;
+    vertical-align: top;
+    display: inline-block;
+}
+main {
+    float: none;
+    width: 60%;
+    vertical-align: top;
+    display: inline-block;
+}
+#right {
+    float: right;
+    width: 20%;
+    vertical-align: top;
+    display: inline-block;
+}
+.article_header {font-size: 150%}
+.date {font-size: 70%}
+.article {
+    width: 70%;
+    text-align: left;
+}
+#footer {
+    position:fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color: black;
+}
+#footer {color: white;}
+#firstcell {font-size: 130%;}

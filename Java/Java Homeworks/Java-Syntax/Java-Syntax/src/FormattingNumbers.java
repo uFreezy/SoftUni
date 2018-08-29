@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+
+public class FormattingNumbers {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		float a = input.nextFloat();
+		float b = input.nextFloat();
+		float c = input.nextFloat();
+		String getHex = Integer.toHexString((int)a);
+		String getBin = Integer.toBinaryString((int)a);
+		String getB = String.format("%.2f", b);
+		String getC = String.format("%.3f", c);
+		
+		for(int i = getHex.length(); i < 10; i++) {
+			getHex = getHex + " ";
+		}
+		for(int i = getBin.length(); i < 10; i++) {
+			getBin = "0" + getBin;
+		}
+		for(int i = getB.length(); i < 10; i++) {
+			getB = " " + getB;
+		}
+		for(int i = getC.length(); i < 10; i++) {
+			getC = getC + " ";
+		}
+		
+		System.out.printf("|%s|%s|%s|%s|",getHex,getBin,getB,getC);
+		
+		
+
+	}
+
+}

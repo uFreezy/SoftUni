@@ -1,0 +1,145 @@
+@font-face {
+    font-family: ComicSans;
+    src: url(softuni-events-content/LDFComicSans.ttf);
+}
+@font-face {
+    font-family: ThisNight;
+    src: url(softuni-events-content/ThisNight.ttf);
+}
+body, #wrapper {
+    width: 100%;
+}
+header {
+    box-sizing: border-box;
+}
+#wrapper > header {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 165px;
+    width: 100%;
+    font-family: ThisNight , Helvetica , sans-serif;
+    background-color: rgb(35,68,101);
+    text-align: center;
+}
+#wrapper > header span {
+    font-size: 680%;
+    color: white;
+    display: inline-block;
+    margin-top: 17px;
+    width: 100%;
+}
+#wrapper > header span:hover {
+    color: orange;
+    cursor: pointer;
+}
+header > nav {
+    width: 100%;
+    background-color: white;
+    padding-top: 5px;
+}
+header > nav > ul {
+    list-style-type: none;
+    background-color: white;
+}
+header > nav > ul > li {
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 15px;
+    font-size: 150%;
+    color: rgb(35,68,101);
+}
+ul > li:hover {
+    color: orange !important;
+    cursor: pointer;
+}
+#clicked {
+    background-color: rgb(35,68,101);
+    color: white;
+}
+section {
+    width: 960px;
+    height: 300px;
+    margin-top: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: ComicSans, Arial , sans-serif;
+}
+article {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 465px;
+    padding: 15px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow:  5px 5px  9px rgb(35,68,101);
+}
+section > article > img:hover {
+    cursor: pointer;
+}
+.articleheader {
+    font-size: 250%;
+    padding-top: 5px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px orange;
+    background-color: rgb(35,68,101);
+}
+.content {
+    font-size: 110%;
+    line-height: 130%;
+    display: inline-block;
+    width: 100%;
+}
+.credits {
+    font-size: 80%;
+    font-style: italic;
+    color: gray;
+    line-height: 130%;
+}
+footer {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: -535px;
+    left: 0;
+    font-family: ComicSans, Arial , sans-serif;
+    background-color: rgb(35,68,101);
+}
+footer > nav {
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+footer > nav > ul {
+    list-style-type: none;
+    margin: 0 auto;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    padding: 20px 0;
+}
+footer > nav > ul > li {
+    display: inline;
+    color: #fff;
+    padding: 5px;
+    margin-left: 15px;
+    font-size: 130%;
+}
+footer > nav > ul > li:hover {
+    background-color: orange;
+    color: #234465 !important;
+}
+footer > #footercontent > span {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}

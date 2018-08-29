@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'Oleo Script';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oleo Script'), local('OleoScript-Regular'),
+    url(http://fonts.gstatic.com/s/oleoscript/v5/_weQNDK6Uf40CiGFKBBUjo4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2'),
+    url(http://fonts.gstatic.com/s/oleoscript/v5/_weQNDK6Uf40CiGFKBBUjobN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 12px;
+    background-color: #50247D;
+}
+#wrapper {
+    display: block;
+    width: 1000px;
+    margin: 0 auto;
+}
+#wrapper > header {
+    height: 250px;
+    margin-bottom: 30px;
+    background-image: url("orion-page-resources/orion-gas-and-star-bgr.jpg");
+}
+#heading, #subheading {
+    font-family: "Oleo Script";
+    display: block;
+    font-size: 68px;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+}
+#heading {
+    line-height: 90%;
+    padding-top: 15px;
+}
+#subheading {
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 26px;
+}
+#wrapper > header > nav {
+    width: 100%;
+    margin-top: 70px;
+}
+header > nav > ul {
+    list-style-type: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+header > nav > ul > li {
+    display: inline;
+    background-color: #fff;
+    color: #50247D;
+    padding: 12px 20px;
+    margin-left: 10px;
+}
+header > nav > ul > li:hover {
+    background-color: #36A4D5;
+    color: white;
+    cursor: pointer;
+}
+#navhr {
+    width: 100%;
+    height: 10px;
+    background-color: #35A4D3;
+    margin-top: 40px;
+}
+#contentwrap {
+    display: flex;
+    flex-direction: row;
+    background-color: #EAE7EE;
+    width: 100%;
+}
+section {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    margin: 35px 10px 20px 35px;
+}
+#maincontent {
+    width: 100%;
+    height: 467px;
+    background-color: #fff;
+
+}
+.readmore {
+    width: 100%;
+    height: 30px;
+}
+.readmore > span {
+    display: inline-block;
+    float: right;
+    color: #fff;
+    padding: 7px 20px;
+    background-color: #35A4D3;
+
+}
+#arthead {
+    display: inline-block;
+    font-family: "Oleo Script";
+    width: 100%;
+    line-height: 90%;
+    font-size: 48px;
+}
+#artsubhead {
+    font-size: 26px;
+    font-weight: bold;
+}
+.boldcontent {
+    font-weight: bold;
+}
+#maincontent > div > p {
+    margin-top: 10px;
+    font-size: 15px;
+}
+#maincontent {
+    padding-left: 30px;
+}
+#maincontent > footer  {
+    margin-top: 44px;
+    margin-left: 0;
+    width: 100%;
+    height: 28px;
+}
+@-moz-document url-prefix() {
+    #maincontent > footer {
+        margin-top: 12px;
+    }
+}
+#maincontent > footer > span {
+    background-color: #865AB3;
+    color: #fff;
+    padding: 7px 13px;
+    float: right;
+}
+#maincontent > footer > span:hover {
+    background-color: #50257D;
+    cursor: pointer;
+}
+#miniarticles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+#miniarticles > article {
+    width: 42%;
+    background-color: #fff;
+    margin-bottom: 15px;
+    margin-right: 35px;
+}
+#miniarticles > article > .readmore {
+    position: absolute;
+    width: 187px;
+}
+.miniheader {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5px 5px 5px 10px;
+    color: #36A9E0;
+}
+.miniarticle {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+footer {
+    width: 300px;
+    margin: 25px 0 25px 10px;
+    color: #fff;
+}
+#secthr1 {
+    width: 100%;
+    height: 10px;
+    background-color: #865AB3;
+}
+#secthr2 {
+    width: 100%;
+    height: 10px;
+    background-color: #37A3D2;
+}

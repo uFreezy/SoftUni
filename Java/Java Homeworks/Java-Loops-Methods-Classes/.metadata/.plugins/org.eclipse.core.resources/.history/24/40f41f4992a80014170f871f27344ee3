@@ -1,0 +1,37 @@
+import java.text.SimpleDateFormat;
+import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+import javax.print.attribute.standard.DateTimeAtCompleted;
+
+
+public class DaysBetween2Days {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		Calendar date1 = getDate(input.nextLine());
+		Calendar date2 = getDate(input.nextLine());
+		long days = -1;
+
+		int daysBetween = date1.get(Calendar.DAY_OF_YEAR) - date2.get(Calendar.DAY_OF_YEAR);
+		System.out.println(daysBetween);
+
+	}
+	public static Calendar getDate(String input) {
+		String[] values = input.split("-");
+		Date date = new Date();
+		date.setYear(Integer.parseInt(values[2]));
+		date.setMonth(Integer.parseInt(values[1]));
+		date.setDate(Integer.parseInt(values[0]));
+		Calendar parseDate = Calendar.getInstance();
+		parseDate.setTime(date);
+		return parseDate;
+		
+		
+		
+	}
+
+}

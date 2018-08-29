@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class CouplesFrequency {
+	private static int getFrequency(List<String> a,String b) {
+		
+		int getFreq = 0; 
+		getFreq += Collections.frequency(a, b);
+		return getFreq;
+		
+	}
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		
+		List<String> eles = new ArrayList<String>();
+		List<String> elesClean = new ArrayList<String>();
+		Scanner input = new Scanner(System.in);
+		String inp = input.nextLine();
+		
+		eles =  Arrays.asList(inp.split(" "));
+		for(int i = 0; i < eles.size()-1; i++ ) {
+			//ystem.out.println(eles.get(i));
+			String buffer = eles.get(i) + " " + eles.get(i + 1);
+			eles.set(i, buffer);
+			//System.out.println(getFrequency(eles,eles.get(i)));
+			
+		}
+		for(int i = 0; i < eles.size(); i++) {
+			if(Collections.frequency(eles, eles.get(i)) == 1) {
+				elesClean.add(eles.get(i));
+			}
+		}
+		System.out.println(elesClean);
+		for(int i = 0; i < eles.size(); i++) {
+			//System.out.println(getFrequency(eles,eles.get(i)));
+		}
+	}
+
+}

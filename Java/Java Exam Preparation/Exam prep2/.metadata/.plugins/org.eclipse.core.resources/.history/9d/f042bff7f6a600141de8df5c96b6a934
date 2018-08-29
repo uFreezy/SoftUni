@@ -1,0 +1,26 @@
+
+public class moron {
+
+	public static void main(String[] args) {
+		
+		int i = 0;
+		while(true) {
+			i++;
+			if(i == 10) {
+				i = 0;
+				System.out.println("Moron! ");
+			}
+			else {
+				System.out.print("Moron! ");
+			}
+			try {
+				Thread.sleep(150);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+}

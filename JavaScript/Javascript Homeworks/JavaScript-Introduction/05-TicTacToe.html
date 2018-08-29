@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <script src="05-TicTacToe.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        button {
+            width: 50px;
+            height: 50px;
+            border: 0;
+        }
+        table {
+            display: inline-block;
+        }
+        td {
+            border: 3px solid black;
+        }
+        div {
+            width: 170px;
+            height: 30px;
+            background-color: gray;
+            border: 1px solid darkgray;
+            border-radius: 5px;
+            text-align: center;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+        div:hover {
+            background-color: red;
+            border: 1px solid darkred;
+        }
+    </style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0">
+    <tr>
+        <td>
+            <button onclick="myFunction(0)"></button>
+        </td>
+        <td>
+            <button onclick="myFunction(1)"></button>
+        </td>
+        <td>
+            <button onclick="myFunction(2)"></button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="myFunction(3)"></button>
+        </td>
+        <td>
+            <button onclick="myFunction(4)"></button>
+        </td>
+        <td>
+            <button onclick="myFunction(5)"></button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="myFunction(6)"></button>
+        </td>
+        <td>
+            <button onclick="myFunction(7)"></button>
+        </td>
+        <td>
+            <button onclick="myFunction(8)"></button>
+        </td>
+    </tr>
+</table>
+<div onclick="Reset()">
+    New game
+</div>
+</body>
+</html>

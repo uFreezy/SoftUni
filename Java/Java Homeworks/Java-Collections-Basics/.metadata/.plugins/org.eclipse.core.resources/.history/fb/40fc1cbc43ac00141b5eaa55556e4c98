@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class SequencesOfEqualStrings {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		String[] arr = input.nextLine().split(" ");
+		List<String> inp = new LinkedList<String>(Arrays.asList(arr));
+		
+		for(int i  = 0; i < inp.size(); i++) {
+			for(int a = 1; a < inp.size(); a++) {
+				if(inp.get(i) == inp.get(a)) {
+					inp.set(i, inp.get(i) +" "+ inp.get(i));
+					inp.remove(a);
+				}
+			}
+		}
+		for(String ele : inp) {
+			System.out.println(ele);
+		}
+
+	}
+
+}

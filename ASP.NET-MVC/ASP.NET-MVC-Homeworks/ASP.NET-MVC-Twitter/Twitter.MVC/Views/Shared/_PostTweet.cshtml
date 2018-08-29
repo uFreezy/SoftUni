@@ -1,0 +1,18 @@
+﻿@{
+    if (User.Identity.IsAuthenticated)
+    {
+        <div class="row">
+            @using (Html.BeginForm("PostTweet", "Tweet", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.TextArea("Text", new
+                {
+                    @class = "form-control noresize",
+                    @placeholder = "Post your tweet."
+                })
+
+                <input type="submit" value="Submit" class="btn btn-default"/>
+            }
+        </div>
+    }
+}

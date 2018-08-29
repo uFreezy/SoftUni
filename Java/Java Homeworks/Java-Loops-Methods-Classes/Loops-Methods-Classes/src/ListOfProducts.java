@@ -1,0 +1,82 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.PrintWriter;
+import java.util.Collection;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+public class ListOfProducts {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		
+
+		String inputURL = "/home/freezy/SoftUni-Java-Homeworks/"
+				+ "Java-Loops-Methods-Classes/Loops-Methods-Classes/src/input.txt";
+		String outputURL = "/home/freezy/SoftUni-Java-Homeworks/"
+				+ "Java-Loops-Methods-Classes/Loops-Methods-Classes/src/output.txt";
+		FileReader inputF = new FileReader(inputURL);
+		PrintWriter out = new PrintWriter(outputURL);
+		Scanner input = new Scanner(inputF);
+		TreeMap<Double, String> map = new TreeMap<Double, String>();		
+		
+		while(input.hasNextLine()) {
+			String[] getInp = input.nextLine().split(" ");
+			Products get = new Products(getInp[0],Double.parseDouble(getInp[1]));
+			map.put(get.getP(), get.getN());
+		}
+		input.close();
+		
+		String[] output = new String[map.size()];
+		Collection<String> values = map.values();
+		String[] outVals =  new String[map.size()];
+		int iterator = 0;
+		
+		for(String ele : values) {
+			outVals[iterator] = ele;
+		}
+		
+		for(int i = 0; i < output.length; i++) {
+			output[i] = Double.toString(map.firstKey()) + " " + map.get(map.firstKey());
+			map.remove(map.firstKey());
+		}
+		
+		for(String ele : output) {
+			out.println(ele);
+		}
+		
+		out.close();
+	}
+
+}
+
+class Products {
+	private double price;
+	private String name;
+	private TreeMap<Double,String>  map = new TreeMap<>();
+
+	public Products(String name, double price) {
+		this.name = name;
+		this.price = price;
+	}
+
+	public double getP() {
+		return price;
+	}
+
+	public void setP(double price) {
+		this.price = price;
+	}
+
+	public String getN() {
+		return name;
+	}
+
+	public void setN(String name) {
+		this.name = name;
+	}
+	public TreeMap<Double,String> getMap(Products point) {
+		map.put(point.getP(), point.getN());
+		return map;
+	}
+
+}

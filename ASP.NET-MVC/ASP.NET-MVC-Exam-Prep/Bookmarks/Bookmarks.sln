@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarks.App", "Bookmarks.App\Bookmarks.App.csproj", "{FCD462FB-B939-4ED6-BBAE-B53541772D45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarks.Data", "Bookmarks.Data\Bookmarks.Data.csproj", "{226F3572-A22C-4A50-9554-0ADB299460C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarks.Models", "Bookmarks.Models\Bookmarks.Models.csproj", "{F6C0326D-20F7-44B6-878A-5C4F8A722E37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCD462FB-B939-4ED6-BBAE-B53541772D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD462FB-B939-4ED6-BBAE-B53541772D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD462FB-B939-4ED6-BBAE-B53541772D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD462FB-B939-4ED6-BBAE-B53541772D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226F3572-A22C-4A50-9554-0ADB299460C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226F3572-A22C-4A50-9554-0ADB299460C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226F3572-A22C-4A50-9554-0ADB299460C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226F3572-A22C-4A50-9554-0ADB299460C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C0326D-20F7-44B6-878A-5C4F8A722E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C0326D-20F7-44B6-878A-5C4F8A722E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C0326D-20F7-44B6-878A-5C4F8A722E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C0326D-20F7-44B6-878A-5C4F8A722E37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

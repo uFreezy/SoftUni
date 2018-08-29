@@ -1,0 +1,79 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+
+public class WeirdStrings {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		String rawInp = input.nextLine();
+		rawInp = rawInp.replaceAll("[\\(\\)\\|\\/\\u005c\\ ]", ""); // hell
+		//awInp = rawInp.replaceAll("[0-9]", )
+		String[] words = rawInp.split("\\W"); // digits have to be added;
+		List<String> wordsList = new LinkedList<String>(Arrays.asList(words));
+		
+		for(int i = 0; i < wordsList.size(); i++) {
+			if(wordsList.get(i).equals(" ") || wordsList.get(i).equals("")) {
+				wordsList.remove(i);
+			}
+		}
+//		for(String ele : words) {
+//			System.out.println(ele);;
+//		}
+//		for(String ele : wordsList) {
+//			System.out.println(ele);
+//		}
+		int bIndx1 = 0;
+		int bIndx2 = 0;
+		int biggestSum = 0;
+		for(int i = 0; i < wordsList.size() -3; i++) {
+			int weight1 = getWeight(wordsList.get(i).toCharArray()) 
+					+ getWeight(wordsList.get(i+1).toCharArray());
+			int weight2 = getWeight(wordsList.get(i+1).toCharArray()) 
+					+ getWeight(wordsList.get(i+2).toCharArray());
+			
+			if(weight1 > weight2 &&  weight1 > biggestSum) {
+				bIndx1 = i;
+				bIndx2 = i+1;
+				biggestSum = weight1;
+			}
+			else if (weight1 == weight2) {
+				if(weight1 == biggestSum) {
+					bIndx1 = i+1;
+					bIndx2 = i+2;
+				}
+				else if (weight1 > biggestSum) {
+					bIndx1 = i+1;
+					bIndx2 = i+2;
+					biggestSum = weight1;
+				}
+			}
+			else if (weight1 < weight2 && weight2 > biggestSum) {
+				bIndx1 = i+1;
+				bIndx2 = i+2;
+				biggestSum = weight2;
+			}
+		}
+		System.out.println(wordsList.get(bIndx1));
+		System.out.println(wordsList.get(bIndx2));;
+//		for(String ele : wordsList) {
+//			System.out.printf("%s - %s",ele,getWeight(ele.toCharArray()));
+//			System.out.println();
+//		}
+		
+	}
+	public static int getWeight(char[] c) {
+		int result = 0;
+		for(int i = 0; i < c.length; i++) {
+			result += (Character.isUpperCase(c[i]) ? 1 + (c[i] - 'A') : 1 + (c[i] - 'a'));
+		}
+		return result;
+	}
+
+}

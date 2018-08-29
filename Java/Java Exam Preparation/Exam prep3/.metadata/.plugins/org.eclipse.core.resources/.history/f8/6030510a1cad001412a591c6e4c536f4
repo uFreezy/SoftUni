@@ -1,0 +1,40 @@
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+
+public class WeirdStrings {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		String rawInp = input.nextLine();
+		rawInp = rawInp.replaceAll("[\\(\\)\\|\\/\\u005c]", ""); // hell
+		//awInp = rawInp.replaceAll("[0-9]", )
+		String[] words = rawInp.split("\\W"); // digits have to be added;
+		TreeMap<Integer,String> map = new TreeMap<Integer,String>();
+		TreeMap<Integer,String> mapDup = new TreeMap<Integer,String>();
+		
+		for(int a = 0; a < words.length; a++) {
+			for(int i = a; i < words.length-1; i++) {
+				if(getWeight(words[i].toCharArray()) > getWeight(words[i+1].toCharArray())) {
+					String buffer = words[i+1];
+					words[i+1] = words[i];
+					words[i] = buffer;
+				}
+			}
+		}
+		for(String ele : words) {
+			System.out.println(ele);
+		}
+		
+	}
+	public static int getWeight(char[] c) {
+		int result = 0;
+		for(int i = 0; i < c.length; i++) {
+			result += (Character.isUpperCase(c[i]) ? 1 + (c[i] - 'A') : 1 + (c[i] - 'a'));
+		}
+		return result;
+	}
+
+}

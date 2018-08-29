@@ -1,0 +1,16 @@
+html,body {
+    padding: 0;
+    margin: 0;
+}
+input,div,button {
+    margin-left: 10px;
+}
+input, div {
+    width: 150px;
+}
+div {
+    box-sizing: border-box;
+    margin-top: 2px;
+    height: 20px;
+    border: 1px solid black;
+}

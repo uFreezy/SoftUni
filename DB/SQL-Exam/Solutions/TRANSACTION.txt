@@ -1,0 +1,53 @@
+Begin Transaction
+DECLARE @i int
+SET @i = 0
+WHILE @i < ( SELECT TOP 1
+		Id
+	FROM Cameras
+	ORDER BY Id DESC) BEGIN
+SET @i += 1
+SELECT @i
+UPDATE Cameras
+SET Price += (SELECT
+		AVG(Price)
+	FROM Cameras
+	WHERE ManufacturerId = (SELECT
+			ManufacturerId
+		FROM Cameras
+		WHERE Id = @i))
+
+* ((SELECT
+		LEN(Name)
+	FROM Manufacturers
+	WHERE Id = (SELECT TOP 1
+			ManufacturerId
+		FROM Cameras
+		WHERE ManufacturerId = (SELECT
+				ManufacturerId
+			FROM Cameras
+			WHERE Id = @i)))
+/ 100.0)
+WHERE Id = @i
+END
+SELECT
+	rs.Model,
+	rs.Price,
+	rs.ManufacturerId
+FROM (SELECT
+		rs.*,
+		RANK()
+		OVER (PARTITION BY ManufacturerId
+		ORDER BY Price DESC) AS Rank
+	FROM Cameras rs) rs
+WHERE Rank <= 3
+AND Price IS NOT NULL
+
+ORDER BY rs.ManufacturerId, rs.Price, rs.Model
+
+ROLLBACK;
+
+
+--The cameras rose. The rising logic is the following. Camera’s price is raised by the average price of cameras 
+--of its manufacturer multiplied by a percent equal to the manufacturer’s name length. 
+--After this manipulation print the three most expensive cameras’ Model, Price and ManufacturerId per manufacturer, 
+--ordered by ManufacturerId then by Price then by Model.

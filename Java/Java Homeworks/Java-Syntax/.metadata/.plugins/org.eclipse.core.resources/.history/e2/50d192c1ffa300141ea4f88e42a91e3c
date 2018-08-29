@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+
+public class RectangleArea {
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int a = input.nextInt();
+		int b = input.nextInt();
+		System.out.printf("%1",(a*b));
+		
+
+	}
+
+}

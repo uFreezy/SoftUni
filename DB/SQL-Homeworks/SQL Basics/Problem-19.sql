@@ -1,0 +1,1 @@
+SELECT e.* , d.* FROM Employees e, Addresses d WHERE e.EmployeeID = d.AddressID

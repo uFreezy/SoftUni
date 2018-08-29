@@ -1,0 +1,19 @@
+#head_table {width: 100%;}
+#input form {
+    padding-left: 70%;
+    text-align: right;
+}
+#head {padding-left: 2%;}
+#left_ul {
+    list-style-type: none;
+}
+.article {
+    width: 70%;
+    text-align: left;
+}
+.article_header {font-size: 150%;}
+.date {font-size: 70%}
+#footer{background-color: black}
+#footer table tr td {color: white}
+#firstcell {font-size: 130%;}
+a {text-decoration: none;}

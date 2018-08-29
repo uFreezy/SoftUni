@@ -1,0 +1,4 @@
+Problem 6. Find and Rename
+
+
+find /home/xubuntu/Desktop/test -type f | xargs -I % mv % %.cpp

@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+
+public class LongestOddEvenSeq {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		String getInp = input.nextLine();
+		int valNumb =  getInp.length() - getInp.replaceAll("\\)", "").length();
+		int[] values = new int[valNumb];
+		String[] strBuff = getInp.split("\\)");
+		int bCount = 1;
+		int cCount = 1;
+		Boolean odd = false;
+		Boolean even = false;
+		
+		for(int i = 0; i < valNumb; i++) {
+			values[i] = Integer.parseInt(strBuff[i].replaceAll("\\W", ""));
+			//System.out.println(values[i]);
+		}
+		for(int i = 0; i < valNumb; i++) {
+			if(values[i] % 2 == 0) {
+				even = true;
+				if(odd) {
+					odd = false;
+					cCount = 1;
+				}
+				else {
+					cCount++;
+				}
+				if(cCount > bCount) {
+					bCount = cCount;
+				}
+			}
+			else {
+				odd = true;
+				if(even) {
+					even = false;
+					cCount = 1;
+				}
+				else {
+					cCount++;
+				}
+				if(cCount > bCount) {
+					bCount = cCount;
+				}
+			}
+			System.out.println(bCount);
+		}
+		System.out.println(bCount);
+	}
+
+}

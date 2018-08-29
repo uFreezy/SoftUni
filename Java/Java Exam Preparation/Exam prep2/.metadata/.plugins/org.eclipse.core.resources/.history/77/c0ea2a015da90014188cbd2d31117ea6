@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+
+
+public class Orders {
+	
+	public static String[][] sortOrders(String[] get, int n) {
+		String[][] sorted = new String[n][3];
+		for(String ele : get) {
+			String[] line = ele.split(" ");
+			for(int i = 0; i < 3; i++) {
+				sorted[ele.indexOf(ele)][i] = line[i];
+			}
+		}
+		return sorted;
+	}
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		//String[][] values = new String[n][4];
+		String[] getInp = new String[n];
+		
+		for(int i = 0; i < n; i++) {
+			getInp[i] = input.nextLine();
+		}
+		System.out.println(sortOrders(getInp,n));
+
+
+	}
+
+}

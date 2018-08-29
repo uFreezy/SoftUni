@@ -1,0 +1,2 @@
+javac /home/xubuntu/workspace/Introduction-to-Java-Homework/src/SumTwoNumbers.java
+java -cp /home/xubuntu/workspace/Introduction-to-Java-Homework/src SumTwoNumbers

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Largest3Rect {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String getInp =  input.nextLine();
+		int rectNumbs = getInp.length() - getInp.replace("]", "").length();
+		String[] split = new String[rectNumbs];
+		int[] rectSums = new int[rectNumbs];
+		
+		split = getInp.split("]");
+		for(int i = 0; i < split.length; i++) {
+			split[i] = split[i].replaceAll("\\W", "");
+			String cut = split[i].split("x").toString();
+			rectSums[i] = Integer.parseInt(cut);
+			System.out.println(rectSums[i]);
+			System.out.println(split[i]);
+		}
+		//getInp = getInp.replaceAll("\\W","");
+		//System.out.println(getInp);
+
+	}
+
+}

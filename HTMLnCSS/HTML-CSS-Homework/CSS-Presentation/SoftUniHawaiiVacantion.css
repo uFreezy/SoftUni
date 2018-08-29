@@ -1,0 +1,23 @@
+@font-face { font-family: Animated; src: url('resources/Animated.ttf'); }
+div {
+    font-family: Animated;
+    color: #FF9900;
+    letter-spacing: 3px;
+    text-align: right;
+    font-size: 350%;
+}
+body {
+    background:
+                url(resources/VladoKHula.png) 820px 275px no-repeat,
+                url(resources/AlexHula.png) 600px 230px no-repeat,
+                url(resources/NakovHula.png)485px 180px no-repeat,
+                url(resources/TediHula.png) 300px 405px no-repeat,
+                url(resources/PetiaHula.png) 200px 200px no-repeat,
+                url(resources/VladoGHula.png) 50px 230px no-repeat,
+                url(resources/HawaiiBackground.png) no-repeat center center fixed,
+                linear-gradient(45deg, rgba(213,221,226,1) 26%,rgba(125,185,232,1) 41%,rgba(32,124,202,1) 86%);
+
+
+    background-size:  300px 360px,300px 400px,300px 420px,180px 230px,300px 430px,300px 400px,100% 100%,100% 100%;
+
+}

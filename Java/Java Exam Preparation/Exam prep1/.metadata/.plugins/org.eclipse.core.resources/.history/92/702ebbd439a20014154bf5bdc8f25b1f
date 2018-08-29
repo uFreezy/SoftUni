@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Largest3Rect {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String getInp =  input.nextLine();
+		getInp = getInp.replaceAll("[","");
+		System.out.println(getInp);
+
+	}
+
+}

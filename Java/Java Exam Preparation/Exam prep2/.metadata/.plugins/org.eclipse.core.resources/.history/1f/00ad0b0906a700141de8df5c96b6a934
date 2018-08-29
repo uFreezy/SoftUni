@@ -1,0 +1,13 @@
+import java.math.BigInteger;
+
+
+public class moron {
+
+	public static void main(String[] args) {
+		double asd = 5.566666666666666666666666666666666666666666666666666666666666667;
+		
+		System.out.println(asd);
+
+	}
+
+}

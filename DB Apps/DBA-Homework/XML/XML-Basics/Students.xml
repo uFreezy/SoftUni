@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema schemaLocation="XMLSchema1.xsd">
+<students xmlns:students="urn:students">
+   <student>
+      <name>Ivan</name>
+      <gender>Male</gender>
+      <phone minOccurs="0">08912323245</phone>
+      <email>Somemail@abv.bg</email>
+      <university>Some university</university>
+      <speciality>Zidaro mazach</speciality>
+      <facnumber minOccurs="0">435345345345</facnumber>
+      <takenexams>
+         <exam>
+            <ex-name>Math</ex-name>
+            <ex-date>12/12/12</ex-date>
+            <ex-grade>A+</ex-grade>
+         </exam>
+      </takenexams>
+   </student>
+   <student>
+      <name>Bat Gergi</name>
+      <gender>Female</gender>
+      <phone minOccurs="0" />
+      <email>nabatgergimeila@meil.org</email>
+      <university>Selskiq universitet</university>
+      <speciality>Traktorist</speciality>
+      <facnumber minOccurs="0" />
+      <takenexams>
+         <exam>
+            <ex-name>Kopane</ex-name>
+            <ex-date>16/16/16</ex-date>
+            <ex-grade>C-</ex-grade>
+         </exam>
+      </takenexams>
+   </student>
+</students>
+</xs:schema>

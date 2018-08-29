@@ -1,0 +1,49 @@
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+import javax.print.attribute.standard.DateTimeAtCompleted;
+
+
+public class DaysBetween2Days {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		Calendar date1 = getDate(input.nextLine());
+		Calendar date2 = getDate(input.nextLine());
+		long diff = -1;
+
+		//int daysBetween = date2.get(Calendar.DAY_OF_YEAR) - date1.get(Calendar.DAY_OF_YEAR);
+		diff = Math.round((date2.getTime() - date1.getTime()) / (double) 86400000);
+		System.out.println(diff);
+		System.out.println(date1.getTime());
+
+	}
+	public static Calendar getDate(String input) {
+		//String[] values = input.split("-");
+		//input.replace('-', '/'); // <--- unparsable date 
+		Date date = new Date();
+		DateFormat f = new SimpleDateFormat("dd-MM-yyyy");
+		try {
+			date = f.parse(input);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+//		date.setYear(Integer.parseInt(values[2]));
+//		date.setMonth(Integer.parseInt(values[1]));
+//		date.setDate(Integer.parseInt(values[0]));
+		Calendar parseDate = Calendar.getInstance();
+		parseDate.setTime(date);
+		return parseDate;
+		
+		
+		
+	}
+
+}

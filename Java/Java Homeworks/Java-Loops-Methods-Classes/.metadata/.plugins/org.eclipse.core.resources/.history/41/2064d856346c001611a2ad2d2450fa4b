@@ -1,0 +1,20 @@
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		TreeMap<Integer,String> newMap = new TreeMap<>();
+		newMap.put(2,"asdasd");
+		newMap.put(5,"dsdasdasdasdasdas");
+		newMap.put(1,"yolo");
+		System.out.println(newMap);
+	}
+
+}

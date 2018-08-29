@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+
+public class CouplesFrequency {
+	private static int getFrequency(List<String> a,String b) {
+		
+		int getFreq = 0; 
+		getFreq += Collections.frequency(a, b);
+		return getFreq;
+		
+	}
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		
+		List<String> eles = new ArrayList<String>();
+		List<String> elesClean = new ArrayList<String>();
+		Set<String> set = new HashSet<String>(); // Removes duplicate values
+		Scanner input = new Scanner(System.in);
+		String inp = input.nextLine();
+		
+		eles =  Arrays.asList(inp.split(" "));
+		for(int i = 0; i < eles.size()-1; i++ ) {
+			//ystem.out.println(eles.get(i));
+			String buffer = eles.get(i) + " " + eles.get(i + 1);
+			eles.set(i, buffer);
+			//System.out.println(getFrequency(eles,eles.get(i)));
+			
+		}
+		set.addAll(eles);
+		//list.clear();
+		elesClean.addAll(set);
+		for(int i = 0; i < elesClean.size()-2; i++) {
+			for(int k = 0; k < elesClean.size()-2; i++) {
+				Boolean bigger = getFrequency(eles,elesClean.get(i)) < 
+								 getFrequency(eles,elesClean.get(i+1));
+				if(bigger == true) {
+					String buffer = elesClean.get(i+1);
+					elesClean.set(i+1, elesClean.get(i));
+					elesClean.set(i, buffer);
+				}
+			}
+			System.out.println(elesClean);
+		}
+	}
+
+}

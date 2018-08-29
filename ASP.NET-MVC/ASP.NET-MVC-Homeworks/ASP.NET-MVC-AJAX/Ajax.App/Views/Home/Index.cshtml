@@ -1,0 +1,42 @@
+﻿@model System.Data.Entity.IDbSet<Ajax.Models.ApplicationUser>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row" id="1">
+    <ul>
+        @{
+
+            foreach (var user in Model)
+            {
+                <li>
+                    <a href="#" class="user" id="@user.Id">@user.UserName</a>
+                </li>
+            }
+        }
+    </ul>
+
+</div>
+
+@section Scripts{
+    <script>
+        $(".user").hover(function() {
+            var userId = this.id;
+
+            if (!$("#userInfo").length) {
+                $.get("/Home/GetUserInfo",
+                { userId: userId }, function(data) {
+                    $("#1").after("" +
+                        "<div id='userInfo'>" +
+                        "<h5> Username: " + data.UserName + "</h5>" +
+                        "<h5>Email confirmed? " + data.EmailConfirmed + "</h5>" +
+                        "</div>");
+
+                });
+            } else {
+                $("#userInfo").remove();
+            }
+
+        });
+    </script>
+}

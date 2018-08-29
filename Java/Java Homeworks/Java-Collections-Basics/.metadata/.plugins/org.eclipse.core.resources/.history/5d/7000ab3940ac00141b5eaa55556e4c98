@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class SortArrayOfNumbers {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		input.nextLine();
+		int[] arr = new int[n];
+		for(int ele : arr) {
+			ele = input.nextInt();
+			input.nextLine();
+		}
+		//arr = Arrays.asList(arr).sort();
+		List<Integer> sort = new ArrayList<Integer>();
+		sort = Arrays.asList(Integer.getInteger(arr.toString()));
+		sort.sort((Comparator<? super Integer>) sort);
+		for(Integer ele : sort) {
+			System.out.println(ele);
+		}
+	}
+
+}

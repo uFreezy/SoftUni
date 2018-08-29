@@ -1,0 +1,50 @@
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+import javax.xml.crypto.Data;
+
+
+public class ListOfProducts {
+
+	public class Products {
+		private String name;
+		private double price;
+		private List<String> out;
+		
+		public Products(String name, double price) {
+			this.name = name;
+			this.price = price;
+			//this.out = out;
+		}
+		public void setValues(String name, double price) {
+			this.name = name;
+			this.price = price;
+			out.add(name + Double.toString(price));
+		}
+		public List<String> getSmth() {
+			return out;
+		}
+	}
+	public static void main(String[] args) {
+		
+
+		String inputURL = "";
+		//FileReader inputF = new FileReader(inputURL);
+		//Scanner input = new Scanner(inputF);
+		Products  newP = new Products("asd",6.8);
+		newP.setValues("asd", 5.5);
+		newP.setValues("asd2", 6.5);
+		newP.setValues("asd3", 7.5);
+		
+		List<String> newArr = new ArrayList<String>(newP.getSmth());
+		for(String ele : newArr) {
+			System.out.println(ele);
+		}
+		
+	}
+
+}
